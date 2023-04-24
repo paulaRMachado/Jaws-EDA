@@ -6,7 +6,10 @@ This repo was created for an exploratory analysis of the global shark attack dat
 The objective of this analysis is to explores some cleaning and visualization tecniques in order to answer some questions regarding the behavior of sharks.
 
 ## Description
-This  analysis will explore a couple of questions such as, "Do sharks demonstrate special hate towards women?" and also When and where do most deaths occur?
+This  analysis will explore a few questions such as: 
+- "Do sharks demonstrate special hate towards women?"
+- "When and where do most deaths occur?"
+- "Does any particular species attack more women?"
 
 Since the sorce data is very inconsistent, many different tecniques had to be used in order to standardize some of the informartion needed for the analysis:
 - Removal of duplicates
@@ -25,5 +28,15 @@ For this project five different libraries were used:
 - os module
 - re for RegEx
 
+## Conclusions
+From the questions presented the conclusions are demonstrated through the following charts:
+![](/images/incidents involving sharks.png)
+![](/images/history of death.png)
+![](/images/Deaths by gender.png)
+![](/images/Womens time of death and sharks.png)
+![](/images/Time of deaths.png)
+![](/images/Time of deaths.png)
+![](/images/Womens deaths per continent.png)
 ## Launch
-Open your command module and run the file `main.py`
+1. Git clone this repo
+. Open your command module and run the file `main.py`

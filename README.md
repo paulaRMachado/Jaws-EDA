@@ -6,13 +6,24 @@ This repo was created for an exploratory analysis of the global shark attack dat
 The objective of this analysis is to explores some cleaning and visualization tecniques in order to answer some questions regarding the behavior of sharks.
 
 ## Description
+This  analysis will explore a couple of questions such as, "Do sharks demonstrate special hate towards women?" and also When and where do most deaths occur?
 
+Since the sorce data is very inconsistent, many different tecniques had to be used in order to standardize some of the informartion needed for the analysis:
+- Removal of duplicates
+- Droping collumn and row not useful to our goal
+- Fill NaNs with iterable/useful information
+- Application of RegEx
+- Stardardization of informations and titles applying dictionaries
+
+Two extra columns were created in order to group information in clusters more useful to the visualizations required.
 
 ## Tecnologies
-For this project four different libraries were used: 
+For this project five different libraries were used: 
 - pandas
 - matplotlib 
 - seaborn 
 - os module
+- re for RegEx
 
 ## Launch
+Open your command module and run the file `main.py`

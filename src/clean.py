@@ -9,11 +9,16 @@ def basic_cleaning (df):
     return: cleaned dataframe
     """
     # 1. Overall cleaning
+    # drop columns from the dataframe
+    columns_to_drop = ["pdf", "href formula", "href", "Unnamed: 22", "Unnamed: 23", "Case Number", "original order", "Case Number.1", "Case Number.2"]
+    df.drop(columns = columns_to_drop, inplace=True)
+
+    df.columns = [i.lower().replace(" ", "_") for i in df.columns]
+    df.rename(columns = {'species_' : 'species', 'sex_' : 'gender', 'fatal_(y/n)' : 'fatal'}, inplace=True)
     df.drop_duplicates(inplace=True)
+    # drop missing values 
     df.dropna(thresh=3, inplace=True)
-    df.drop(columns=['pdf', 'href formula', 'href', 'Unnamed: 22', 'Unnamed: 23', 'Case Number','original order', 'Case Number.1','Case Number.2'], inplace=True)
-    df.columns = [i.lower().replace(" ", "-") for i in df.columns]
-    df.rename(columns={"species-": "species", "sex-":"gender", "fatal-(y/n)":"fatal"})
+
     
     # 2. Specific cleaning
     ##YEAR column
@@ -38,8 +43,7 @@ def basic_cleaning (df):
     'EUROPE': ['ENGLAND', 'SPAIN', 'FRANCE', 'ITALY', 'GREECE', 'AZORES', 'MALTA', 'RUSSIA', 'CROATIA', 'PORTUGAL', 'SLOVENIA', 'MONACO', 'IRELAND', 'SWEDEN', 'Between PORTUGAL & INDIA','SLOVENIA','CYPRUS'],
     'NORTH AMERICA': ['USA', 'MEXICO', 'CANADA'],
     'SOUTH AMERICA': ['BRAZIL', 'ECUADOR', 'COLUMBIA', 'NICARAGUA', 'CHILE', 'URUGUAY', 'ARGENTINA', 'PERU', 'FALKLAND ISLANDS', 'PARAGUAY'],
-    'CENTRAL AMERICA':['GRENADA','COSTA RICA', 'BAHAMAS', 'CUBA', 'DOMINICAN REPUBLIC', 'CAYMAN ISLANDS', 'ARUBA','PUERTO RICO', 'TRINIDAD & TOBAGO', 'ST. MARTIN', 'JAMAICA', 'BELIZE','TURKS & CAICOS', 'BERMUDA', 'NETHERLANDS ANTILLES', 'NORTHERN MARIANA ISLANDS', 'CURACAO', 'BARBADOS','BRITISH WEST INDIES']
-}
+    'CENTRAL AMERICA':['GRENADA','COSTA RICA', 'BAHAMAS', 'CUBA', 'DOMINICAN REPUBLIC', 'CAYMAN ISLANDS', 'ARUBA','PUERTO RICO', 'TRINIDAD & TOBAGO', 'ST. MARTIN', 'JAMAICA', 'BELIZE','TURKS & CAICOS', 'BERMUDA', 'NETHERLANDS ANTILLES', 'NORTHERN MARIANA ISLANDS', 'CURACAO', 'BARBADOS','BRITISH WEST INDIES']}
     d = {k: oldk for oldk, oldv in continent_dict.items() for k in oldv}
 
     df['continent'] = df['country'].map(d)
@@ -81,7 +85,7 @@ def basic_cleaning (df):
             return x
     
     df["time"] = df["time"].apply(clean_time)
-    
+
     # 3. Export and read
     df.to_csv("data/jaws_clean.csv", index=False)
     jaws = pd.read_csv("data/jaws_clean.csv")

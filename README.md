@@ -31,13 +31,12 @@ For this project five different libraries were used:
 ## Conclusions
 From the questions presented the conclusions are demonstrated through the following charts:
 
-![](images/incidents involving sharks.png)
-![](images/history of death.png)
-![](images/Deaths by gender.png)
-![](images/Womens time of death and sharks.png)
-![](images/Time of deaths.png)
-![](images/Time of deaths.png)
-![](images/Womens deaths per continent.png)
+![Image](images/incidents_involving_sharks.png)
+![](images/history_of_death.png)
+![](images/Deaths_by_gender.png)
+![](images/Womens_time_of_death_and_sharks.png)
+![](images/Time_of_deaths.png)
+![](images/Womens_deaths_per_continent.png)
 
 Sharks attacks **deaths** more often occur to **men rather than women**. Persisting on investigating deaths of women, the data shows that it is difficult to identify the attacking species, but **White sharks** and **Tiger Sharks** are the most active/or easy to indentify. Their prefered time time to attack  is in the **afternoon**.
 

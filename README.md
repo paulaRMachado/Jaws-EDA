@@ -39,7 +39,7 @@ From the questions presented the conclusions are demonstrated through the follow
 ![](images/Time of deaths.png)
 ![](images/Womens deaths per continent.png)
 
-Sharks attacks deaths more often occur to men rather than women. Persisting on investigating deaths of women, the data shows that it is difficult to identify the attacking species, but White sharks and Tiger Sharks are the most active/or easy to indentify. Their prefered time time to attack  is in the afternoon.
+Sharks attacks **deaths** more often occur to **men rather than women**. Persisting on investigating deaths of women, the data shows that it is difficult to identify the attacking species, but **White sharks** and **Tiger Sharks** are the most active/or easy to indentify. Their prefered time time to attack  is in the **afternoon**.
 
 
 ## Launch

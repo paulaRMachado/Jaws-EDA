@@ -1,13 +1,13 @@
 import pandas as pd
 import matplotlib.pyplot as mplot
 import seaborn as sbn
+import os
 
 def visualizing (jaws):
     """This function groups by type 
     and creates a bar chart with avgeprice
     Arguments
     :df: df. dataframe to group
-    :name: string. name to save
     """
     # General deaths per time
     fatality = jaws.loc[(jaws.fatal == "Fatal")]
@@ -37,9 +37,9 @@ def visualizing (jaws):
     women_death_continent.figure.savefig("images/Womens deaths per continent.png", dpi=100)
 
     # 2. Open
-    os.system(f"open images/Womens deaths per continent.png")
-    os.system(f"open images/history of death.png")
-    os.system(f"open images/incidents involving sharks.png")
-    os.system(f"open images/Womens time of death and sharks.png")
-    os.system(f"open images/Womens deaths per continent.png")
-    os.system(f"open images/Womens deaths per continent.png")
+    os.system(f"open images/Womens_deaths_per_continent.png")
+    os.system(f"open images/history_of_death.png")
+    os.system(f"open images/incidents_involving_sharks.png")
+    os.system(f"open images/Womens_time_of_death_and_sharks.png")
+    os.system(f"open images/Deaths_by_gender.png")
+    os.system(f"open images/Time_of_deaths.png")
